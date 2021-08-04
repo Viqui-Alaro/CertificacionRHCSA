@@ -1,0 +1,19 @@
+03/08/2021
+
+Desarrollo General del Curso
+- Objetivos oficiales para el examen
+Para crear el laboratorio se debe contar 3 servidores como mínimo con las siguientes características:
+- RHEL8
+- 2GB de RAM mínimo
+- 1CPU
+- Disco Primario 15GB
+
+
+Gestión de Redes
+Validación de configuración de red
+- Todas las interfaces de Red mas su descripción
+    $ ip a
+-  Muestra la interfaz de ip, validamos la configuración de red 
+    $ ip a s enp1s0 o $ ip addr show enp1s0
+- estadisticas de red
+    $ ip -s link show enp1s0
