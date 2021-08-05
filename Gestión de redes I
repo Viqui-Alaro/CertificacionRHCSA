@@ -17,3 +17,18 @@ Validación de configuración de red
     $ ip a s enp1s0 o $ ip addr show enp1s0
 - estadisticas de red
     $ ip -s link show enp1s0
+    
+04/08/2021   
+Comprobanco la conectividad a los host esto hacemos en el master
+- ssh rhel8master -l root
+
+# ping -c5  192.168.20.60
+hacemos ping a la mascara ip inet6 de maquina virtual cliente
+# ping6 -c5 fe80::900e:b7d9:ae54:cb33
+ahora hacemos por SSH
+# ssh fe80::900e:b7d9:ae54:cb33 
+y hacemos " ip a " para obtener la interfaz que seria algo asi enp1s0
+# ssh fe80::900e:b7d9:ae54:cb33%enp0s3
+
+ 
+    
