@@ -21,6 +21,11 @@ Validación de configuración de red
 04/08/2021   
 Comprobanco la conectividad a los host esto hacemos en el master
 - ssh rhel8master -l root
+como ya estamos conectados en master
+lo que hacemos es lo siguiente
+- Todas las interfaces de Red mas su descripción
+# ip a
+
 
 # ping -c5  192.168.20.60
 hacemos ping a la mascara ip inet6 de maquina virtual cliente
