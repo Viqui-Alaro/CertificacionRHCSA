@@ -19,6 +19,7 @@ Validación de configuración de red
     $ ip -s link show enp1s0
     
 04/08/2021   
+3. Comprobando la conectividad
 Comprobanco la conectividad a los host esto hacemos en el master
 - ssh rhel8master -l root
 como ya estamos conectados en master
@@ -27,7 +28,7 @@ lo que hacemos es lo siguiente
 # ip a
 
 
-# ping -c5  192.168.20.60
+# ping -c5  192.168.20.60 // este ping este al cliente
 hacemos ping a la mascara ip inet6 de maquina virtual cliente
 # ping6 -c5 fe80::900e:b7d9:ae54:cb33
 ahora hacemos por SSH
@@ -35,5 +36,38 @@ ahora hacemos por SSH
 y hacemos " ip a " para obtener la interfaz que seria algo asi enp1s0
 # ssh fe80::900e:b7d9:ae54:cb33%enp0s3
 
+ 22/08/2021
+ 4. Problemas de puertos y servicios
+ Los servicios TCP utilizan socket como puntos finales para la comunicación y estan formados por una dirección ip, un protocolo y numero de puerto
+==>> el servicio es el protocolo y el puerto        es decir ejem TCP/UDP 3358
+Los servicios escuchan en puerto estandar
+mientras los clientes usan un puerto disponible al azar
+ 
+----Esto en el cliente 
+# less /etc/services  /// tenemos el nombre del servicio el puerto y el protocolo
+
+-- Herramienta para mostrar estadisticas de sockets hablando de puerto y protocolo
+# ss
+# ss | less
+# ss --help
+
+* la t es para mostrar el display only TCP
+# ss -ta // muestr
+# netstat -ta // es similar a ss -ta
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
     
