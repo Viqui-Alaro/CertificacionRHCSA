@@ -55,6 +55,9 @@ mientras los clientes usan un puerto disponible al azar
 # ss -ta // muestr
 # netstat -ta // es similar a ss -ta
 
+
+----Esto en el proyect
+
  
  
  
