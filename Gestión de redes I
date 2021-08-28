@@ -58,8 +58,10 @@ mientras los clientes usan un puerto disponible al azar
 
 ----Esto en el proyect
 
- 
- 
+/**************** borrar 
+ * la t es para mostrar el display only TCP
+# ss -ta // muestr
+# netstat -ta // es similar a ss -ta
  
  
  
